@@ -1,0 +1,1 @@
+docker run --name spray-mysql -p 3306:3306 -e MYSQL_DATABASE=spray -e MYSQL_ROOT_PASSWORD=123123 -d mysql
