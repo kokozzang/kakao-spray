@@ -18,11 +18,4 @@ public interface SprayRepository extends JpaRepository<Spray, Long> {
       "where s.token = :token")
   Optional<Spray> findByTokenWithSprayItems(String token);
 
-  @Query(value = "select distinct s, si " +
-      "from Spray s " +
-      "join s.sprayItems si on si.userId is null " +
-      "where s.token = :token")
-//  Optional<Spray> findByTokenWithSprayItem2(String token);
-  List<Spray> findByTokenWithSprayItem2(String token);
-
 }
